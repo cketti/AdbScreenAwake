@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ADB Screen Awake</string>
+    <string name="service_name">ADB Screen Awake</string>
+</resources>
