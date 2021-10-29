@@ -50,6 +50,10 @@ class AdbNotificationListenerService : NotificationListenerService() {
         adbConnected = activeNotifications.any(::isAdbConnectedNotification)
     }
 
+    override fun onListenerDisconnected() {
+        leaveScreenAlone()
+    }
+
     override fun onNotificationPosted(statusBarNotification: StatusBarNotification) {
         if (isAdbConnectedNotification(statusBarNotification)) {
             adbConnected = true
